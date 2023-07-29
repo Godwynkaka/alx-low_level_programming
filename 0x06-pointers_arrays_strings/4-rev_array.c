@@ -1,32 +1,25 @@
-#include <main.h>
+#include "main.h"
+
 /**
- * reverse_array - a function that reverses the
- *                content of an array of integers
+ * reverse_array - function that reverses the content
+ * of an array of itegers
+ * @a: an array of integers
+ * @n: the number of elements to swap
  *
- * @a: pointer to int array
- * @n: is the number of elements to swap
- *
- * Return: nothing
-*/
+ * Return: vocount1d
+ */
 
 void reverse_array(int *a, int n)
 {
-	int temp, s, e;
+	int count1, count2, temp;
 
-	s = 0;
-	e = n - 1;
-	/**
-	 * set value in array a in temp
-	 * then place the last array in
-	 * the first array then place
-	 * value in temp to last array
-	*/
-	while (s < e)
+	for (count1 = 1; count1 < n; count1++)
 	{
-		temp = a[s];
-		a[s] = a[e];
-		a[e] = temp;
-		s++;
-		e--;
+		for (count2 = 0; count2 < (n - count1); count2++)
+		{
+			temp = *(a + count2);
+			*(a + count2) = *(a + (count2 + 1));
+			*(a + (count2 + 1)) = temp;
+		}
 	}
 }

@@ -1,5 +1,7 @@
 #include "main.h"
 /**
+ *#include "main.h"
+/**
  * _strcat -  function that concatenates two strings.
  * @dest: destination string
  * @src: source string
@@ -32,4 +34,4 @@ char *_strcat(char *dest, char *src)
 		count2++;
 	}
 	return (dest);
-}
+} _strcat -  function that concatenates two strings.
